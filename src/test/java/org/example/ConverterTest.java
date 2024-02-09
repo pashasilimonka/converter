@@ -7,183 +7,161 @@ import static org.junit.Assert.*;
 public class ConverterTest {
 
     @Test
-    public void whenNumberIsGreaterThan4000000Then(){
+    public void numberIsGreaterThan4000000(){
         assertNull(Converter.convertToRoman(5000000));
     }
     @Test
-    public void whenNumberIs0Then(){
+    public void numberIs0(){
         assertNull(Converter.convertToRoman(0));
     }
     @Test
-    public void whenNumberIsLessThan4000000Then(){
+    public void numberIsLessThan4000000(){
         assertNotNull(Converter.convertToRoman(3000000));
     }
     @Test
-    public void whenNumberIs1Then(){
+    public void numberIs1(){
         assertEquals("I",Converter.convertToRoman(1));
     }
     @Test
-    public void whenNumberIs4Then(){
+    public void numberIs4(){
         assertEquals("IV",Converter.convertToRoman(4));
     }
     @Test
-    public void whenNumberIs5Then(){
+    public void numberIs5(){
         assertEquals("V",Converter.convertToRoman(5));
     }
     @Test
-    public void whenNumberIs9Then(){
+    public void numberIs9(){
         assertEquals("IX",Converter.convertToRoman(9));
     }
     @Test
-    public void whenNumberIs7Then(){
+    public void numberIs7(){
         assertEquals("VII",Converter.convertToRoman(7));
     }
     @Test
-    public void whenNumberIs10Then(){
+    public void numberIs10(){
         assertEquals("X",Converter.convertToRoman(10));
     }
     @Test
-    public void whenNumberIs30Then(){
-        assertEquals("XXX",Converter.convertToRoman(30));
+    public void numberIs14(){
+        assertEquals("XIV",Converter.convertToRoman(14));
     }
     @Test
-    public void whenNumberIs40Then(){
+    public void numberIs20(){
+        assertEquals("XX",Converter.convertToRoman(20));
+    }
+    @Test
+    public void numberIs33(){
+        assertEquals("XXXIII",Converter.convertToRoman(33));
+    }
+    @Test
+    public void numberIs40(){
         assertEquals("XL",Converter.convertToRoman(40));
     }
     @Test
-    public void whenNumberIs50Then(){
+    public void numberIs50(){
         assertEquals("L",Converter.convertToRoman(50));
     }
     @Test
-    public void whenNumberIs60Then(){
-        assertEquals("LX",Converter.convertToRoman(60));
+    public void numberIs65(){
+        assertEquals("LXV",Converter.convertToRoman(65));
     }
     @Test
-    public void whenNumberIs80Then(){
-        assertEquals("LXXX",Converter.convertToRoman(80));
-    }
-    @Test
-    public void whenNumberIs90Then(){
+    public void numberIs90(){
         assertEquals("XC",Converter.convertToRoman(90));
     }
     @Test
-    public void whenNumberIs100Then(){
+    public void numberIs100(){
         assertEquals("C",Converter.convertToRoman(100));
     }
-
     @Test
-    public void whenNumberIs300Then(){
-        assertEquals("CCC",Converter.convertToRoman(300));
+    public void numberIs135(){
+        assertEquals("CXXXV",Converter.convertToRoman(135));
     }
     @Test
-    public void whenNumberIs400Then(){
+    public void numberIs150(){
+        assertEquals("CL",Converter.convertToRoman(150));
+    }
+    @Test
+    public void numberIs190(){
+        assertEquals("CXC",Converter.convertToRoman(190));
+    }
+    @Test
+    public void numberIs375(){
+        assertEquals("CCCLXXV",Converter.convertToRoman(375));
+    }
+    @Test
+    public void numberIs400(){
         assertEquals("CD",Converter.convertToRoman(400));
     }
     @Test
-    public void whenNumberIs500Then(){assertEquals("D",Converter.convertToRoman(500));}
-
-    @Test
-    public void whenNumberIs600Then(){
-        assertEquals("DC",Converter.convertToRoman(600));
+    public void numberIs656(){
+        assertEquals("DCLVI",Converter.convertToRoman(656));
     }
     @Test
-    public void whenNumberIs900Then(){
+    public void numberIs900(){
         assertEquals("CM",Converter.convertToRoman(900));
     }
     @Test
-    public void whenNumberIs1000Then(){
+    public void numberIs1000(){
         assertEquals("M",Converter.convertToRoman(1000));
     }
     @Test
-    public void whenNumberIs3000Then(){
-        assertEquals("MMM",Converter.convertToRoman(3000));
+    public void numberIs3465(){
+        assertEquals("MMMCDLXV",Converter.convertToRoman(3465));
     }
     @Test
-    public void whenNumberIs4000Then(){
-        assertEquals("_I_V",Converter.convertToRoman(4000));
+    public void numberIs4578(){
+        assertEquals("_I_VDLXXVIII",Converter.convertToRoman(4578));
     }
     @Test
-    public void whenNumberIs5000Then(){
-        assertEquals("_V",Converter.convertToRoman(5000));
+    public void numberIs9234(){
+        assertEquals("_I_XCCXXXIV",Converter.convertToRoman(9234));
     }
     @Test
-    public void whenNumberIs6000Then(){
-        assertEquals("_VM",Converter.convertToRoman(6000));
+    public void numberIs15000(){
+        assertEquals("_X_V",Converter.convertToRoman(15000));
     }
     @Test
-    public void whenNumberIs8000Then(){
-        assertEquals("_VMMM",Converter.convertToRoman(8000));
+    public void numberIs45700(){
+        assertEquals("_X_L_VDCC",Converter.convertToRoman(45700));
     }
     @Test
-    public void whenNumberIs9000Then(){
-        assertEquals("_I_X",Converter.convertToRoman(9000));
-    }
-
-    @Test
-    public void whenNumberIs10000Then(){
-        assertEquals("_X",Converter.convertToRoman(10000));
-    }
-    @Test
-    public void whenNumberIs30000Then(){
-        assertEquals("_X_X_X",Converter.convertToRoman(30000));
-    }
-    @Test
-    public void whenNumberIs40000Then(){
-        assertEquals("_X_L",Converter.convertToRoman(40000));
-    }
-    @Test
-    public void whenNumberIs50000Then(){
+    public void numberIs50000(){
         assertEquals("_L",Converter.convertToRoman(50000));
     }
     @Test
-    public void whenNumberIs60000Then(){
-        assertEquals("_L_X",Converter.convertToRoman(60000));
+    public void numberIs92800(){
+        assertEquals("_X_CMMDCCC",Converter.convertToRoman(92800));
     }
     @Test
-    public void whenNumberIs80000Then(){
-        assertEquals("_L_X_X_X",Converter.convertToRoman(80000));
+    public void numberIs155000(){
+        assertEquals("_C_L_V",Converter.convertToRoman(155000));
     }
     @Test
-    public void whenNumberIs90000Then(){
-        assertEquals("_X_C",Converter.convertToRoman(90000));
-    }
-    @Test
-    public void whenNumberIs100000Then(){
-        assertEquals("_C",Converter.convertToRoman(100000));
-    }
-    @Test
-    public void whenNumberIs300000Then(){
-        assertEquals("_C_C_C",Converter.convertToRoman(300000));
-    }
-    @Test
-    public void whenNumberIs400000Then(){
+    public void numberIs400000(){
         assertEquals("_C_D",Converter.convertToRoman(400000));
     }
     @Test
-    public void whenNumberIs500000Then(){
-        assertEquals("_D",Converter.convertToRoman(500000));
+    public void numberIs975467(){
+        assertEquals("_C_M_L_X_X_VCDLXVII",Converter.convertToRoman(975467));
     }
     @Test
-    public void whenNumberIs600000Then(){
-        assertEquals("_D_C",Converter.convertToRoman(600000));
+    public void numberIs1268345(){
+        assertEquals("_M_C_C_L_X_VMMMCCCXLV",Converter.convertToRoman(1268345));
     }
     @Test
-    public void whenNumberIs800000Then(){
-        assertEquals("_D_C_C_C",Converter.convertToRoman(800000));
+    public void numberIs2567890(){
+        assertEquals("_M_M_D_L_X_VMMDCCCXC",Converter.convertToRoman(2567890));
     }
     @Test
-    public void whenNumberIs900000Then(){
-        assertEquals("_C_M",Converter.convertToRoman(900000));
+    public void numberIs3000789(){
+        assertEquals("_M_M_MDCCLXXXIX",Converter.convertToRoman(3000789));
     }
     @Test
-    public void numberIs1000000(){
-        assertEquals("_M",Converter.convertToRoman(1000000));
+    public void numberIs3500000(){
+        assertEquals("_M_M_M_D",Converter.convertToRoman(3500000));
     }
-    @Test
-    public void numberIs3000000(){
-        assertEquals("_M_M_M",Converter.convertToRoman(3000000));
-    }
-
     @Test
     public void numberIs3999999(){
         assertEquals("_M_M_M_C_M_X_C_I_XCMXCIX",Converter.convertToRoman(3999999));
